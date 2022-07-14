@@ -1,0 +1,75 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int a, b, c, d, e, f, g, error;
+    printf("\n\n BENVENUTI NELLA TRATTORIA INFORMATICA.\n\n");
+    printf("Cosa vuole ordinare dal nostro menù?");
+
+do {
+        error=0;
+printf("\n Bevande: \n 1: Acqua naturale \n 2: Acqua frizzante \n 3:Coca cola \n 4: Fanta \n 5: Vino bianco 1 \n 6: Vino bianco 2 \n 7: Vino rosso 1 ");
+printf("\n Scegli: ");
+scanf("%d",&a);
+
+switch (a) {
+   case 1:
+   case 2:
+   printf("\n Costo 2 euro");
+   break;
+   case 3:
+   case 4:
+    printf("\n Costo 3 euro");
+    break;
+   case 5:
+   case 6:
+   case 7:
+    printf("\nCosto per calice 5 euro");
+    break;
+
+   default:
+    printf("\n ERRORE!!! (Devi digitare il numero della bevanda)\n RIPROVA: ");
+    error=error+1;
+
+}
+}while(error>0);
+
+
+
+do{
+   error=0;
+    printf("\n  Antipasti: \n 9: Prosciutto crudo e mozzarella di bufala \n 10:Polenta \n 11:Bruschette con crema di noci \n 12: Frittura all'italiana");
+    printf("\n Scegli: ");
+    scanf("%d", &b);
+
+    switch(b){
+    case 9:
+        printf("\n Costo per porzione 10 euro ");
+        break;
+    case 10:
+        printf("\n Costo per porzione 6 euro");
+        break;
+    case 11:
+        printf("\n Costo per porzione 8 euro (3 bruschette)");
+        break;
+    case 12:
+        printf("\n Costo per porzione 12 euro");
+        break;
+
+    default:
+        printf("\n ERRORE!!! \N (Devi scrivere il numero della pietanza scelta)\n RIPROVA: ");
+        error=error+1;
+
+    }
+    }while(error>0);
+
+    printf("\n  Primi piatti di terra;");
+    printf("\n  Primi piatti di mare; ");
+    printf("\n  Secondi piatti di terra;");
+    printf("\n  Secondi piatti di mare;");
+    printf("\n Dolci.");
+
+  return 0;
+}
