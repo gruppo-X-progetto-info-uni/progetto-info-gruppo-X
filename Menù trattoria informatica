@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+CIAOOOOOOOOOOOOOOOOOOOOOOO
 
 int main()
 {
@@ -10,7 +11,7 @@ int main()
 
 do {
         error=0;
-printf("\n Bevande: \n 1: Acqua naturale \n 2: Acqua frizzante \n 3:Coca cola \n 4: Fanta \n 5: Vino bianco 1 \n 6: Vino bianco 2 \n 7: Vino rosso 1 ");
+printf("\n Bevande: \n 1: Acqua naturale \n 2: Acqua frizzante \n 3:Coca cola \n 4: Fanta \n 5: Vino bianco 1 \n 6: Vino bianco 2 \n 7: Vino rosso 1 \n 8:Vino rosso 2 ");
 printf("\n Scegli: ");
 scanf("%d",&a);
 
@@ -26,6 +27,7 @@ switch (a) {
    case 5:
    case 6:
    case 7:
+   case 8:
     printf("\nCosto per calice 5 euro");
     break;
 
@@ -64,12 +66,170 @@ do{
 
     }
     }while(error>0);
+    
+    do{
+    error=0;
+    printf("\n  Primi piatti di terra: \n 13: Gnocchi alla sorrentina \n 14:Trofie salsiccia e funghi porcini \n 15:Bolognese \n 16:Risotto allo zafferano \n 17:Pasta patate,provola e pancetta;");
+    printf("\n Scegli: ");
+    scanf("%d",&c);
 
-    printf("\n  Primi piatti di terra;");
-    printf("\n  Primi piatti di mare; ");
-    printf("\n  Secondi piatti di terra;");
-    printf("\n  Secondi piatti di mare;");
-    printf("\n Dolci.");
+     switch(c){
+    case 13:
+        printf("\n Costo per porzione 7 euro ");
+        break;
+    case 14:
+        printf("\n Costo per porzione 10 euro");
+        break;
+    case 15:
+        printf("\n Costo per porzione 8 euro ");
+        break;
+    case 16:
+        printf("\n Costo per porzione 12 euro");
+        break;
+    case 17:
+        printf("\n Costo per porzione 9 euro");
+         break;
+
+    default:
+        printf("\n ERRORE!!! \N (Devi scrivere il numero della pietanza scelta)\n RIPROVA: ");
+        error=error+1;
+     }
+
+} while(error>0);
+
+printf("\n\n ***********************************\n\n");
+
+
+   do{
+        error=0;
+    printf("\n  Primi piatti di mare:  \n 18:Risotto alla pescatora  \n 19:Spaghetto ai  frutti di mare  \n 20:Paccheri allo scoglio  \n 21:Trofie gamberetti e zucchine; ");
+   printf("\nScegli: ");
+   scanf("%d",&d);
+
+   switch(d){
+     case 18:
+        printf("\n Costo per porzione 12 euro ");
+        break;
+    case 19:
+        printf("\n Costo per porzione 10 euro");
+        break;
+    case 20:
+        printf("\n Costo per porzione 12 euro ");
+        break;
+    case 21:
+        printf("\n Costo per porzione 12 euro");
+        break;
+
+    default:
+        printf("\n ERRORE!!! \N (Devi scrivere il numero della pietanza scelta)\n RIPROVA: ");
+        error=error+1;
+
+
+   }
+    }while(error>0);
+
+
+    printf("\n\n*************************************\n\n");
+
+
+   do{
+        error=0;
+    printf("\n  Secondi piatti di terra: \n 22:Provola affumicata con funghi porcini \n 23:Misto di carne(per due persone)  \n 24:Cotoletta e patatine  \n 25:Scaloppine con insalata");
+    printf("\n Scegli: ");
+    scanf("%d",&e);
+
+    switch(e){
+     case 22:
+        printf("\n Costo per porzione 8 euro ");
+        break;
+    case 23:
+        printf("\n Costo per porzione 25 euro");
+        break;
+    case 24:
+        printf("\n Costo per porzione 7 euro ");
+        break;
+    case 25:
+        printf("\n Costo per porzione 12 euro");
+        break;
+
+    default:
+        printf("\n ERRORE!!! \N (Devi scrivere il numero della pietanza scelta)\n RIPROVA: ");
+        error=error+1;
+
+
+    }
+   }while(error>0);
+
+   printf("\n\n***************************************\n\n");
+
+
+do{
+        error=0;
+    printf("\n  Secondi piatti di mare:  \n 26:Pesce spada al limone accompagnato da peperoni arrostiti \n 27:Frittura mista di pesce  \n 28:Spigola all'acqua pazza accompagnata da insalata \n 29:Calamari arrostiti accompagnati da patate al forno \n 30:Gamberi in crosta");
+    printf("\nScegli: ");
+    scanf("%d",&f);
+
+    switch(f){
+     case 26:
+        printf("\n Costo per porzione 10 euro ");
+        break;
+    case 27:
+        printf("\n Costo per porzione 15 euro");
+        break;
+    case 28:
+        printf("\n Costo per porzione 12 euro ");
+        break;
+    case 29:
+        printf("\n Costo per porzione 16 euro");
+        break;
+    case 30:
+        printf("\n Costo per porzione 16 euro");
+        break;
+
+    default:
+        printf("\n ERRORE!!! \n (Devi scrivere il numero della pietanza scelta)\n RIPROVA: ");
+        error=error+1;
+
+
+    }
+
+}while(error>0);
+
+printf("\n\n*************************************\n\n");
+
+
+   do{
+        error=0;
+    printf("\n Dolci:  \n 31:Cuore caldo al cioccolato \n 32:Tiramisu' \n 33: Delizia al limone \n 34: Croccantino all'amarena \n35:Gelato al melone.");
+    printf("\nScegli: ");
+    scanf("%d",&g);
+
+    switch(g){
+     case 31:
+        printf("\n Costo per porzione 5 euro ");
+        break;
+    case 32:
+        printf("\n Costo per porzione 6 euro");
+        break;
+    case 33:
+        printf("\n Costo per porzione 7 euro ");
+        break;
+    case 34:
+        printf("\n Costo per porzione 6 euro");
+        break;
+    case 35:
+        printf("\n Costo per porzione 4 euro");
+        break;
+
+    default:
+        printf("\n ERRORE!!! \n (Devi scrivere il numero della pietanza scelta)\n RIPROVA: ");
+        error=error+1;
+
+   }
+   }while(error>0);
 
   return 0;
 }
+
+
+
