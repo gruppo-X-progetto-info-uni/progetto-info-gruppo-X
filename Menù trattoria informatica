@@ -4,13 +4,18 @@
 
 int main()
 {
-    int a, b, c, d, e, f, g, error;
+    int a, b, c, d, e, f, g, error, k, p;
+
+
+    p=0;
     printf("\n\n BENVENUTI NELLA TRATTORIA INFORMATICA.\n\n");
-    printf("Cosa vuole ordinare dal nostro menù?");
+    printf("Cosa vuole ordinare dal nostro menu'?");
 
 do {
+
         error=0;
-printf("\n Bevande: \n 1: Acqua naturale \n 2: Acqua frizzante \n 3:Coca cola \n 4: Fanta \n 5: Vino bianco 1 \n 6: Vino bianco 2 \n 7: Vino rosso 1 \n 8:Vino rosso 2 ");
+printf("\n Bevande: \n 1: Acqua naturale \n 2: Acqua frizzante \n 3:Coca cola \n 4: Fanta \n 5: Vino bianco Greco di Tufo \n 6: Vino bianco Fiano \n 7: Vino rosso Mojo \n 8:Vino rosso Falanghina  ");
+printf("\n Se non vuoi una bevanda, digita 0 .");
 printf("\n Scegli: ");
 scanf("%d",&a);
 
@@ -18,81 +23,129 @@ switch (a) {
    case 1:
    case 2:
    printf("\n Costo 2 euro");
+   p=p+2;
    break;
    case 3:
    case 4:
     printf("\n Costo 3 euro");
+    p=p+3;
     break;
    case 5:
    case 6:
    case 7:
-   case 8:
     printf("\nCosto per calice 5 euro");
+    p=p+5;
+    break;
+   case 0:
+    printf("Non hai preso nulla,passiamo all'antipasto.");
     break;
 
    default:
-    printf("\n ERRORE!!! (Devi digitare il numero della bevanda)\n RIPROVA: ");
+    printf("\n ERRORE!!! (Devi digitare il numero della bevanda)\n  ");
     error=error+1;
 
+
 }
+printf("\nVuoi qualche altra cosa da bere? 0=si, 1=no:  " );
+    scanf("%d",&k);
+    if(k==0){
+    error=error+1;
+    }
 }while(error>0);
 
+
+
+
+
+
+
+
+printf("\n \n********************************\n\n");
 
 
 do{
    error=0;
     printf("\n  Antipasti: \n 9: Prosciutto crudo e mozzarella di bufala \n 10:Polenta \n 11:Bruschette con crema di noci \n 12: Frittura all'italiana");
+    printf("\n Se non vuoi un antipasto, digita 0 .");
     printf("\n Scegli: ");
     scanf("%d", &b);
 
     switch(b){
     case 9:
         printf("\n Costo per porzione 10 euro ");
+        p=p+10;
         break;
     case 10:
         printf("\n Costo per porzione 6 euro");
+        p=p+6;
         break;
     case 11:
         printf("\n Costo per porzione 8 euro (3 bruschette)");
+        p=p+8;
         break;
     case 12:
         printf("\n Costo per porzione 12 euro");
+        p=p+12;
         break;
-
+    case 0:
+        printf("Non hai preso nulla,passiamo ai primi piatti di terra.");
+        break;
     default:
-        printf("\n ERRORE!!! \N (Devi scrivere il numero della pietanza scelta)\n RIPROVA: ");
+        printf("\n ERRORE!!! \N (Devi scrivere il numero della pietanza scelta)\n  ");
         error=error+1;
 
     }
+
+    printf("\nVuoi qualche altro antipasto? 0=si, 1=no:  " );
+    scanf("%d",&k);
+    if(k==0){
+    error=error+1;
+    }
     }while(error>0);
-    
-    do{
+printf("\n\n***************************************\n\n");
+
+do{
     error=0;
     printf("\n  Primi piatti di terra: \n 13: Gnocchi alla sorrentina \n 14:Trofie salsiccia e funghi porcini \n 15:Bolognese \n 16:Risotto allo zafferano \n 17:Pasta patate,provola e pancetta;");
+    printf("\n Se non vuoi un primo piatto di terra, digita 0 .");
     printf("\n Scegli: ");
     scanf("%d",&c);
 
      switch(c){
     case 13:
         printf("\n Costo per porzione 7 euro ");
+        p=p+7;
         break;
     case 14:
         printf("\n Costo per porzione 10 euro");
+        p=p+10;
         break;
     case 15:
         printf("\n Costo per porzione 8 euro ");
+        p=p+8;
         break;
     case 16:
         printf("\n Costo per porzione 12 euro");
+        p=p+12;
         break;
     case 17:
         printf("\n Costo per porzione 9 euro");
+        p=p+9;
          break;
+    case 0:
+        printf("Non ha preso nessun primo piatto di terra,passiamo ai primi piatti di mare");
+        break;
 
     default:
-        printf("\n ERRORE!!! \N (Devi scrivere il numero della pietanza scelta)\n RIPROVA: ");
+        printf("\n ERRORE!!! \N (Devi scrivere il numero della pietanza scelta)\n  ");
         error=error+1;
      }
+
+     printf("\nVuoi qualche altro primo piatto di terra? 0=si, 1=no:  " );
+    scanf("%d",&k);
+    if(k==0){
+    error=error+1;
+    }
 
 } while(error>0);
 
@@ -102,29 +155,42 @@ printf("\n\n ***********************************\n\n");
    do{
         error=0;
     printf("\n  Primi piatti di mare:  \n 18:Risotto alla pescatora  \n 19:Spaghetto ai  frutti di mare  \n 20:Paccheri allo scoglio  \n 21:Trofie gamberetti e zucchine; ");
+   printf("\n Se non vuoi un primo piatto di mare, digita 0 .");
    printf("\nScegli: ");
    scanf("%d",&d);
 
    switch(d){
      case 18:
         printf("\n Costo per porzione 12 euro ");
+        p=p+12;
         break;
     case 19:
         printf("\n Costo per porzione 10 euro");
+         p=p+10;
         break;
     case 20:
         printf("\n Costo per porzione 12 euro ");
+        p=p+12;
         break;
     case 21:
         printf("\n Costo per porzione 12 euro");
+        p=p+12;
         break;
-
+    case 0:
+        printf("Non hai preso nessun primo piatto di mare, passiamo ai secondi di terra.");
+        break;
     default:
-        printf("\n ERRORE!!! \N (Devi scrivere il numero della pietanza scelta)\n RIPROVA: ");
+        printf("\n ERRORE!!! \N (Devi scrivere il numero della pietanza scelta)\n  ");
         error=error+1;
 
 
    }
+
+   printf("\nVuoi qualche altro primo piatto di mare? 0=si, 1=no:  " );
+    scanf("%d",&k);
+    if(k==0){
+    error=error+1;
+    }
     }while(error>0);
 
 
@@ -134,28 +200,42 @@ printf("\n\n ***********************************\n\n");
    do{
         error=0;
     printf("\n  Secondi piatti di terra: \n 22:Provola affumicata con funghi porcini \n 23:Misto di carne(per due persone)  \n 24:Cotoletta e patatine  \n 25:Scaloppine con insalata");
+    printf("\n Se non vuoi un secondo piatto di terra, digita 0 .");
     printf("\n Scegli: ");
     scanf("%d",&e);
 
     switch(e){
      case 22:
         printf("\n Costo per porzione 8 euro ");
+        p=p+8;
         break;
     case 23:
         printf("\n Costo per porzione 25 euro");
+        p=p+25;
         break;
     case 24:
         printf("\n Costo per porzione 7 euro ");
+        p=p+7;
         break;
     case 25:
         printf("\n Costo per porzione 12 euro");
+        p=p+12;
+        break;
+    case 0:
+        printf("Non hai scelto nessun secondo piatto di terra,passiamo ai secondi di mare.");
         break;
 
     default:
-        printf("\n ERRORE!!! \N (Devi scrivere il numero della pietanza scelta)\n RIPROVA: ");
+        printf("\n ERRORE!!! \N (Devi scrivere il numero della pietanza scelta)\n  ");
         error=error+1;
 
 
+    }
+
+    printf("\nVuoi qualche altro secondo di terra? 0=si, 1=no:  " );
+    scanf("%d",&k);
+    if(k==0){
+    error=error+1;
     }
    }while(error>0);
 
@@ -165,31 +245,46 @@ printf("\n\n ***********************************\n\n");
 do{
         error=0;
     printf("\n  Secondi piatti di mare:  \n 26:Pesce spada al limone accompagnato da peperoni arrostiti \n 27:Frittura mista di pesce  \n 28:Spigola all'acqua pazza accompagnata da insalata \n 29:Calamari arrostiti accompagnati da patate al forno \n 30:Gamberi in crosta");
+   printf("\n Se non vuoi un secondo piatto di mare, digita 0 .");
     printf("\nScegli: ");
     scanf("%d",&f);
 
     switch(f){
      case 26:
         printf("\n Costo per porzione 10 euro ");
+        p=p+10;
         break;
     case 27:
         printf("\n Costo per porzione 15 euro");
+        p=p+15;
         break;
     case 28:
         printf("\n Costo per porzione 12 euro ");
+        p=p+12;
         break;
     case 29:
         printf("\n Costo per porzione 16 euro");
+        p=p+16;
         break;
     case 30:
         printf("\n Costo per porzione 16 euro");
+        p=p+16;
+        break;
+    case 0:
+        printf("Non ha scelto nessun secondo di mare,passiamo ai dolci.");
         break;
 
     default:
-        printf("\n ERRORE!!! \n (Devi scrivere il numero della pietanza scelta)\n RIPROVA: ");
+        printf("\n ERRORE!!! \n (Devi scrivere il numero della pietanza scelta)\n");
         error=error+1;
 
 
+    }
+
+    printf("\nVuoi qualche altro secondo di mare? 0=si, 1=no:  " );
+    scanf("%d",&k);
+    if(k==0){
+    error=error+1;
     }
 
 }while(error>0);
@@ -200,35 +295,57 @@ printf("\n\n*************************************\n\n");
    do{
         error=0;
     printf("\n Dolci:  \n 31:Cuore caldo al cioccolato \n 32:Tiramisu' \n 33: Delizia al limone \n 34: Croccantino all'amarena \n35:Gelato al melone.");
+    printf("\n Se non vuoi un dolce, digita 0 .");
     printf("\nScegli: ");
     scanf("%d",&g);
 
     switch(g){
      case 31:
         printf("\n Costo per porzione 5 euro ");
+        p=p+5;
         break;
     case 32:
         printf("\n Costo per porzione 6 euro");
+        p=p+6;
         break;
     case 33:
         printf("\n Costo per porzione 7 euro ");
+        p=p+7;
         break;
     case 34:
         printf("\n Costo per porzione 6 euro");
+        p=p+6;
         break;
     case 35:
         printf("\n Costo per porzione 4 euro");
+        p=p+4;
+        break;
+    case 0:
+        printf("Non hai scelto nessun dolce.");
         break;
 
     default:
-        printf("\n ERRORE!!! \n (Devi scrivere il numero della pietanza scelta)\n RIPROVA: ");
+        printf("\n ERRORE!!! \n (Devi scrivere il numero della pietanza scelta)\n  ");
         error=error+1;
 
    }
+
+   printf("\nVuoi scegliere un altro dolce? 0=si, 1=no:  " );
+    scanf("%d",&k);
+    if(k==0){
+    error=error+1;
+    }
    }while(error>0);
 
+
+   printf("\n\n\n Il prezzo totale e': %d", p);
   return 0;
 }
 
+
+
+
+
+   
 
 
